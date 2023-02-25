@@ -10,6 +10,7 @@ import com.qa.drbBase.Base;
 
 public class AboutUs extends Base
 {
+	    // Initializing web driver
 		WebDriver driver;
 		
 		
