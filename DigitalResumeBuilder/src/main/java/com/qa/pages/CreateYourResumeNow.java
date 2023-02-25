@@ -12,6 +12,7 @@ import com.qa.drbBase.Base;
 
 public class CreateYourResumeNow extends Base
 {
+	//initializing web driver
 	WebDriver driver;
 	
 	//xpath for create your resume now button
