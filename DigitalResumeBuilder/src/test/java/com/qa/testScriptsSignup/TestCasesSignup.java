@@ -21,7 +21,12 @@ public class TestCasesSignup extends Base
 			signup=new SignUp(driver);
 			
 			signup.clickSignUpNow();
+			String login_page_text=signup.login_getText();
+			Assert.assertEquals(login_page_text,"Signin to continue");
+			
 			signup.clickOrSignUp();		
+			String signup_page_text=signup.signup_getText();
+			Assert.assertEquals(signup_page_text,"NEW ACCOUNT?");
 		}
 		
 		

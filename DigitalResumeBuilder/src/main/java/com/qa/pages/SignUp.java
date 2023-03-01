@@ -17,9 +17,17 @@ public class SignUp extends Base
 		@FindBy(xpath="//a[text()='Signup now']")
 		private WebElement signUpNow_button;
 		
+		//xpath for login page text
+		@FindBy(xpath=" //span[text()=' Signin to continue ']")
+		private WebElement login_text;
+		
 		//xpath for "or sign up" button
 		@FindBy(xpath="//a[text()='or sign up ']")
 		private WebElement orSignUp_button;
+		
+		//xpath for sign up page text
+		@FindBy(xpath="//h3[text()='New Account?']")
+		private WebElement signup_text;
 		
 		//xpath for username field
 		@FindBy(xpath="//input[@placeholder='Username']")
@@ -88,18 +96,19 @@ public class SignUp extends Base
 		@FindBy(xpath="//div[text()=' Password must contain lowercase ,Uppercase ,Numbers and atleast one special characters ']")
 		private WebElement invalid_password_combinations;
 		
-		
-		
-		
 		//xpath for "REGISTER" button
 		@FindBy(xpath="//span[text()='Register']")
 		private WebElement register;
+		
+		
 		
 		public SignUp(WebDriver driver)
 		{
 			this.driver=driver;
 			PageFactory.initElements(driver,this);
 		}
+		
+		
 		
 	
 		public void clickSignUpNow()
@@ -224,7 +233,17 @@ public class SignUp extends Base
 			
 		}
 		
+		public String login_getText()
+		{
+			String text=login_text.getText();
+			return text;
+		}
 		
+		public String signup_getText()
+		{
+			String text=signup_text.getText();
+			return text;
+		}
 		
 		
 		

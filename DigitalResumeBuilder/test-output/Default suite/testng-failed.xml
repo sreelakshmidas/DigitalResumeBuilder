@@ -3,13 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testScriptsUpdateProfile.TestCasesUpdateProfile">
+      <class name="com.qa.testScriptsLogin.TestCasesLogin">
         <methods>
-          <include name="createProfileWithMandatoryDetails"/>
+          <include name="Invalidusernamevalidpassword"/>
+          <include name="nullpasswordvalidusername"/>
+          <include name="Invalidusernameinvalidpassword"/>
+          <include name="nullusernamevalidpassword"/>
+          <include name="Invalidpasswordvalidusername"/>
           <include name="close"/>
           <include name="Setup"/>
         </methods>
-      </class> <!-- com.qa.testScriptsUpdateProfile.TestCasesUpdateProfile -->
+      </class> <!-- com.qa.testScriptsLogin.TestCasesLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

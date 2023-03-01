@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DigitalResumeBuilderTestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="DRBTest(failed)">
+    <classes>
+      <class name="com.qa.testScriptsUpdateProfile.TestCasesUpdateProfile">
+        <methods>
+          <include name="createProfileWithMandatoryDetails"/>
+          <include name="close"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.qa.testScriptsUpdateProfile.TestCasesUpdateProfile -->
+      <class name="com.qa.testScriptsHomePage.TestCases">
+        <methods>
+          <include name="seeMoreTemplates"/>
+          <include name="clickCreateYourResumeNow"/>
+          <include name="close"/>
+          <include name="getStarted"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.qa.testScriptsHomePage.TestCases -->
+      <class name="com.qa.testScriptsSignup.TestCasesSignup">
+        <methods>
+          <include name="alreadyExistingEmailAddress"/>
+          <include name="invalidPhonenumberWithCombinationOfCharactersNumbersSpecialSymbols"/>
+          <include name="close"/>
+          <include name="wrongConfirmPassword"/>
+          <include name="Setup"/>
+          <include name="incompleteConfirmPassword"/>
+        </methods>
+      </class> <!-- com.qa.testScriptsSignup.TestCasesSignup -->
+    </classes>
+  </test> <!-- DRBTest(failed) -->
+</suite> <!-- Failed suite [DigitalResumeBuilderTestSuite] -->

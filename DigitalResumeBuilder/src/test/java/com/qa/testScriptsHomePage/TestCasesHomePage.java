@@ -1,6 +1,4 @@
-package com.qa.testScripts;
-
-
+package com.qa.testScriptsHomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +11,7 @@ import com.qa.pages.SeeMore;
 import com.qa.pages.TemplatesOrDesigns;
 
 
-public class TestCases extends Base
+public class TestCasesHomePage extends Base
 {
 
 	HomePage home;
@@ -22,7 +20,6 @@ public class TestCases extends Base
 	CreateYourResumeNow  resumeNow;
 	GetStarted get;
 	SeeMore see;
-	
 	
 	@Test(priority=1)
 	public void gotoHomePage() throws InterruptedException
@@ -65,16 +62,20 @@ public class TestCases extends Base
 		 resumeNow=new CreateYourResumeNow (driver);
 		 resumeNow.createResumeNow();
 		 Thread.sleep(3000);
-		 
+		
 		 String designText=resumeNow.getText();
 		 Assert.assertEquals(designText,"Here you can choose your Template/Design");
 		 
-		 
 		 resumeNow.mulberry();
+		 String profile_home=resumeNow.profile_home_getText();
+		 Assert.assertEquals(profile_home,"Welcome to Digital Resume Builder");
+		 
 		 resumeNow.create_profile();
 		 
-		 resumeNow.alert();
-	
+		 String alert_message=resumeNow.alert();
+		 Assert.assertEquals(alert_message,"you need to login first");
+		 driver.switchTo().defaultContent();
+		
 	}
 	
 	@Test(priority=5)
@@ -86,8 +87,9 @@ public class TestCases extends Base
 		Thread.sleep(3000);
 		
 		get.profileNowButton();
-		get.alert();
-		
+		String alert_message=get.alert();
+		Assert.assertEquals(alert_message,"you need to login first");
+		driver.switchTo().parentFrame();
 	}
 	
 	@Test(priority=6)

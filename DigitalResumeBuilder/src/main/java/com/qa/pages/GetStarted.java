@@ -30,22 +30,26 @@ public class GetStarted extends Base
 		}
 	
 		
-		public void getStartedButton()
+		public void getStartedButton() throws InterruptedException
 		{
 			JavascriptExecutor executor=(JavascriptExecutor)driver;
 			
+			executor.executeScript("arguments[0].scrollIntoView();",getStarted_button);
+			Thread.sleep(2000);
 			executor.executeScript("arguments[0].click();",getStarted_button);
-			//executor.executeScript("window.scrollBy(0,100)");
+			
 		}
 	
-		public void profileNowButton()
+		public void profileNowButton() throws InterruptedException
 		{
 			JavascriptExecutor executor=(JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].scrollIntoView();",profileNow_button);
+			Thread.sleep(2000);
 			executor.executeScript("arguments[0].click();",profileNow_button);
 			
 		}
 	
-		public void alert() throws InterruptedException
+		public String alert() throws InterruptedException
 		{
 			//switching to alert
 			Alert alert=driver.switchTo().alert();
@@ -60,6 +64,8 @@ public class GetStarted extends Base
 			
 			//accepting alert
 			alert.accept();
+			return alertMessage;
+			
 				
 		}
 	
