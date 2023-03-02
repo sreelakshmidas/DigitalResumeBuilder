@@ -3,10 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <!-- <class name="com.qa.testScriptsUpdateProfile.TestCasesUpdateProfile"/>-->
+     
+     
+    <!--  <class name="com.qa.testScriptsUpdateProfile.TestCasesUpdateProfile"/>--> 
       <class name="com.qa.testScriptsHomePage.TestCasesHomePage"/>
       <class name="com.qa.testScriptsSignup.TestCasesSignup"/>
        <class name="com.qa.testScriptsLogin.TestCasesLogin"/>
+        <class name="com.qa.testScriptsCreateProfile.TestCasesCreateProfile"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
