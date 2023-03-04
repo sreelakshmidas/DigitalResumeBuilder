@@ -17,10 +17,8 @@
         <methods>
           <include name="init"/>
           <include name="CreateProfile_name"/>
-          <include name="validCreateProfile_option"/>
           <include name="close"/>
           <include name="Setup"/>
-          <include name="validCreateProfile"/>
         </methods>
       </class> <!-- com.qa.testScriptsCreateProfile.TestCasesCreateProfile -->
       <class name="com.qa.testScriptsLogin.TestCasesLogin">
@@ -34,6 +32,13 @@
           <include name="Setup"/>
         </methods>
       </class> <!-- com.qa.testScriptsLogin.TestCasesLogin -->
+      <class name="com.qa.testScriptsDeleteDownload.TestCasesDeleteDownload">
+        <methods>
+          <include name="SendWeblinkVerification"/>
+          <include name="close"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.qa.testScriptsDeleteDownload.TestCasesDeleteDownload -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

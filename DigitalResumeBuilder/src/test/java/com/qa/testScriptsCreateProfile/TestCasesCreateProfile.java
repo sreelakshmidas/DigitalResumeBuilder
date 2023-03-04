@@ -212,12 +212,18 @@ String describe=ReadExcelValues.getCellData(2, 30,System.getProperty("user.dir")
  String expected="Profile created";
  Assert.assertEquals(actual,expected);
  
-/* dcrtprf.clickMyProfileButton();
- Thread.sleep(3000);*/
-/* dcrtprf.clickDelete();
+ JavascriptExecutor je= (JavascriptExecutor)driver;
+ je.executeScript("window.scrollBy(0,-500)");
+ Thread.sleep(6000);
+  dcrtprf.clickdprofile();//myprofile
+  Thread.sleep(6000);
+  dcrtprf.clickDelete();//delete click
+ Thread.sleep(1000);  
+
  String alertMessage=dcrtprf.alert();
- Assert.assertEquals(alertMessage,"Are you sure ,you want to delete your profile?");*/
+ Assert.assertEquals(alertMessage,"Are you sure ,you want to delete your profile?");
  
+
  
  
  Thread.sleep(3000);

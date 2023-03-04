@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testScriptsCreateProfile.TestCasesCreateProfile">
+      <class name="com.qa.testScriptsDeleteDownload.TestCasesDeleteDownload">
         <methods>
-          <include name="init"/>
+          <include name="SendWeblinkverification"/>
           <include name="close"/>
           <include name="Setup"/>
-          <include name="validCreateProfile"/>
         </methods>
-      </class> <!-- com.qa.testScriptsCreateProfile.TestCasesCreateProfile -->
+      </class> <!-- com.qa.testScriptsDeleteDownload.TestCasesDeleteDownload -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

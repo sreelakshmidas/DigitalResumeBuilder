@@ -20,6 +20,7 @@ public class CreateProfile extends Base
 	WebDriver driver;
 	
 	@FindBy(xpath="(//a[@href='/profilehome'])")//My Profile
+	//a[text()='My Profile']
     WebElement myprof;
 	@FindBy(xpath="//button[text()='Create a Profile Now']")//Create your resume now
     WebElement crtprfbtn;
@@ -159,10 +160,14 @@ public class CreateProfile extends Base
 
 	public void clickMyProfile() throws InterruptedException
 	{	
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		Thread.sleep(4000);
+		executor.executeScript("arguments[0].scrollIntoView();",myprof);
+		executor.executeScript("arguments[0].click();",myprof);
 		/*WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/profilehome']")));*/
 		Thread.sleep(1000);
-		myprof.click();
+		//myprof.click();
 	}
 
 public void clickprofile()
@@ -176,9 +181,10 @@ executor.executeScript("arguments[0].click();",myprof);
 		crtprfbtn.click();
 		Thread.sleep(500);
 	}
-	public void clickcrprofile()
+	public void clickcrprofile() throws InterruptedException
 	{
 	JavascriptExecutor executor = (JavascriptExecutor)driver;
+	Thread.sleep(6000);
 	executor.executeScript("arguments[0].click();",crtprfbtn);
 	}
 
@@ -487,9 +493,10 @@ executor.executeScript("arguments[0].click();",myprof);
 	
 	
 	
-	public void clickDelete()
+	public void clickDelete() throws InterruptedException
 	 {
 		JavascriptExecutor er = (JavascriptExecutor)driver;
+		Thread.sleep(5000);
 		er.executeScript("arguments[0].scrollIntoView();",delete);
 		  er.executeScript("arguments[0].click();",delete);
 	 }
