@@ -37,14 +37,7 @@ public class DeleteProfile extends Base
 	}
 	
 
-	/* public void WebDriverWait(WebDriver driver, Duration timeout) {
-		    this(
-		        driver,
-		        timeout,
-		        Duration.ofMillis(DEFAULT_SLEEP_TIMEOUT),
-		        Clock.systemDefaultZone(),
-		        Sleeper.SYSTEM_SLEEPER);
-		  }*/
+	
 	public void setUsername(String strUserName)
 		{
 			username.sendKeys(strUserName);

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="Digital Resume Builder Suite">
+  <test thread-count="5" name="DRB Test">
     <classes>
-    	<class name="com.qa.testScriptsHomePage.TestCasesHomePage"/>
-      <class name="com.qa.testScriptsSignup.TestCasesSignup"/>
-        <class name="com.qa.testScriptsLogin.TestCasesLogin"/>
-      <class name="com.qa.testScriptsCreateProfile.TestCasesCreateProfile"/>
-      <class name="com.qa.testScriptsDeleteDownload.TestCasesDeleteDownload"/>
     
-   <!--  <class name="com.qa.testScriptsUpdateProfile.TestCasesUpdateProfile"/>-->  
-      
+      <class name="com.qa.testScriptsHomePage.TestCasesHomePage"/>
+      <class name="com.qa.testScriptsSignup.TestCasesSignup"/>
+      <class name="com.qa.testScriptsLogin.TestCasesLogin"/>
+      <class name="com.qa.testScriptsCreateProfile.TestCasesCreateProfile"/>
+      <class name="com.qa.testScriptsDeleteDownload.TestCasesDeleteDownload"/> 
+      <class name="com.qa.testScriptsEditProfile.TestCasesEditProfile"/>
+     
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> <!-- DRB Test -->
+</suite> <!-- Digital Resume Builder Suite -->

@@ -10,10 +10,22 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.qa.drbBase.Base;
 
-public class UpdateProfile extends Base
+public class EditProfile extends Base
 {
 
 		WebDriver driver;
+		
+		//xpath for edit profile button
+		@FindBy(xpath="//a[text()='Edit Profile']")
+		private WebElement edit_profile_button;
+		
+		//xpath for update button
+		@FindBy(xpath="//button[text()='Update Profile']")
+		private WebElement update_button;
+		
+		
+		
+		
 		
 		
 		//xpath for "SIGNUP NOW" button
@@ -120,11 +132,52 @@ public class UpdateProfile extends Base
 		
 		
 		
-		public UpdateProfile(WebDriver driver)
+		public EditProfile(WebDriver driver)
 		{
 			this.driver=driver;
 			PageFactory.initElements(driver,this);
 		}
+		
+		
+		public void click_edit_button()
+		{
+			JavascriptExecutor executor=(JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();",edit_profile_button);
+		}
+		
+		public void click_updateprofile_button()
+		{
+			JavascriptExecutor executor=(JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();",update_button);
+		}
+		
+
+
+		public String alert() throws InterruptedException
+		{
+			//switching to alert
+			Alert alert=driver.switchTo().alert();
+			
+			//capturing alert message
+			String alertMessage=driver.switchTo().alert().getText();
+			
+			//displaying alert message
+			System.out.println("Alert message:"+alertMessage);
+			
+			alert.accept();
+			
+			return alertMessage;
+					
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	
 	
@@ -276,22 +329,6 @@ public class UpdateProfile extends Base
 		}
 		
 
-		public String alert() throws InterruptedException
-		{
-			//switching to alert
-			Alert alert=driver.switchTo().alert();
-			
-			//capturing alert message
-			String alertMessage=driver.switchTo().alert().getText();
-			
-			//displaying alert message
-			System.out.println("Alert message:"+alertMessage);
-			
-			alert.accept();
-			
-			return alertMessage;
-					
-		}
 		
 		
 		

@@ -32,6 +32,15 @@
           <include name="Setup"/>
         </methods>
       </class> <!-- com.qa.testScriptsLogin.TestCasesLogin -->
+      <class name="com.qa.testScriptsEditProfile.TestCasesEditProfile">
+        <methods>
+          <include name="chooseFileVerification"/>
+          <include name="changeNameVerification"/>
+          <include name="futureDOBverification"/>
+          <include name="close"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.qa.testScriptsEditProfile.TestCasesEditProfile -->
       <class name="com.qa.testScriptsDeleteDownload.TestCasesDeleteDownload">
         <methods>
           <include name="SendWeblinkVerification"/>
